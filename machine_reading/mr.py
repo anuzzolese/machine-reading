@@ -1,7 +1,7 @@
 from pelix.constants import BundleActivator
 from pelix.framework import BundleContext, FrameworkFactory, Framework, create_framework
 from builtins import classmethod
-import os, csv, codecs
+import os, csv, codecs, sys
 from pathlib import Path
 from argparse import ArgumentParser
 from api.api import GraphStore
@@ -23,7 +23,7 @@ class MR(object):
         
             args = parser.parse_args()
             
-            cls.__mrp = MRP()
+            cls.__mrp = MR()
             
             bundles = [
                  "pelix.ipopo.core",
@@ -31,7 +31,7 @@ class MR(object):
                  "pelix.shell.ipopo",
                  "pelix.shell.completion.pelix",
                  "pelix.shell.completion.ipopo",
-                 "pelix.shell.console",
+                 #"pelix.shell.console",
             ]
             
             cls.__framework = create_framework(bundles)
@@ -91,6 +91,9 @@ class MR(object):
                     out_file.write(gstore.serialize(format='nquads'))
             else:
                 print(gstore.serialize(format='nquads'))
+                
+            cls.__framework.stop()
+            
         
         else:
             return None
@@ -100,5 +103,5 @@ class MR(object):
         
         
 if __name__ == '__main__':
-    MR.start()
+    sys.exit(MR.start() or 0)
     
