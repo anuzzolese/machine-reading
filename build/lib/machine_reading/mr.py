@@ -1,6 +1,6 @@
 from pelix.framework import Framework, create_framework
 from builtins import classmethod
-import os, sys
+import os, codecs, sys
 from pathlib import Path
 from argparse import ArgumentParser
         

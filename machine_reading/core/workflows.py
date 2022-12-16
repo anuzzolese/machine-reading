@@ -1,15 +1,11 @@
-from abc import ABC, abstractmethod
 from io import StringIO
-from rdflib.graph import Graph, Dataset, URIRef
+from rdflib.graph import Graph, URIRef
 from pelix.ipopo.decorators import ComponentFactory, Instantiate, Validate, Requires, Provides
-from rdflib import store
 import shortuuid
-from machine_reading.api.api import GraphStore, Corpus, MachineReader
+from machine_reading.api.core import GraphStore, MachineReader
 from machine_reading.api.ontology import MRO
 from typing import List, Dict, Union
-import csv
 import uuid
-import json
 from threading import Thread
 from builtins import callable
 import pandas as pd

@@ -1,7 +1,7 @@
 from pelix.ipopo.decorators import ComponentFactory, Property, Provides, Instantiate
 from rdflib.graph import Graph
 from fredclient.fredclient import FREDClient, FREDParameters
-from machine_reading.api.api import MachineReader
+from machine_reading.api.core import MachineReader
 
 @ComponentFactory("fred-factory")
 @Property("_key", "fred.key", "")
