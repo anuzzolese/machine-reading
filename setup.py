@@ -6,7 +6,8 @@ install_requires=[
    'iPOPO>=1.0.1,<=1.0.1',
    'shortuuid>=1.0.9,<=1.0.9',
    'Jinja2>=3.1.2,<=3.1.2',
-   'Flask>=2.2.2,<=2.2.2'
+   'Flask>=2.2.2,<=2.2.2',
+   'pandas>=1.5.2,<=1.5.2'
 ]
 
 setup(name='machinereading', version='0.0.1',

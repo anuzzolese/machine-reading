@@ -41,7 +41,7 @@ class MR(object):
             if not args.namespace:
                 namespace = 'https://w3id.org/stlab/mr_data/'
             else:
-                namespace = args.prefix
+                namespace = args.namespace
                 
             if not args.delimiter:
                 delimiter = ','

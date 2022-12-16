@@ -127,7 +127,7 @@ class CorpusProcessor(object):
                 reader_name = machine_reader.get_name()
                 local_namespace = f'{base_namespace}{corpus_doc_sent_id}_{reader_name}'
                 
-                graph_id = f'{base_namespace}/Graph/{corpus_doc_sent_id}_{reader_name}'
+                graph_id = f'{base_namespace}Graph/{corpus_doc_sent_id}_{reader_name}'
                 
                 machine_reader_uriref = machine_reader_ns[reader_name]
                 machine_reading = machine_reading_ns[corpus_doc_sent_id]
@@ -148,10 +148,13 @@ class CorpusProcessor(object):
                 g = machine_reader.read(content, namespace=f'{local_namespace}/')
                 
                 if g:
-                    gstore.add_named_graph(g, URIRef(local_namespace))
+                    gstore.add_named_graph(g, URIRef(graph_id))
                 
+            meta_g_uri = URIRef(f'{base_namespace}Graph/meta')
+            meta_g.add((meta_g_uri, RDF.type, MRO.Graph))
+            meta_g.add((meta_g_uri, RDFS.label, Literal(f'Meta graph produced during the computation of a corpus.')))
             
-            gstore.add_named_graph(meta_g, meta_ns)
+            gstore.add_named_graph(meta_g, meta_g_uri)
             
             
         
