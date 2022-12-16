@@ -64,13 +64,13 @@ class MR(object):
             
             mcr_bundles = []
             
-            for f in os.listdir('./core'):
+            for f in os.listdir('./machine_reading/core'):
                 if f.endswith('.py'):
                     f = f[:-3]
                     mcr_bundles.append(cls.__framework.install_bundle(f, './machine_reading/core'))
             
             if modality == 'all':
-                for f in os.listdir('./readers'):
+                for f in os.listdir('./machine_reading/readers'):
                     if f.endswith('.py'):
                         f = f[:-3]
                         mcr_bundles.append(cls.__framework.install_bundle(f, './machine_reading/readers'))
