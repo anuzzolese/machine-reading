@@ -26,10 +26,13 @@ class GraphStore(object):
     def add_named_graph(self, graph: Graph, graphIdentifier: URIRef) -> None:
         namedGraph = self.__dataset.graph(graphIdentifier)
         for s, p, o in graph:
-            namedGraph.add((s, p, o))    
+            namedGraph.add((s, p, o))
             
-    def serialize(self, format: str) -> str:
-        nquads = self.__dataset.serialize(format=format)
+    def get_named_graph(self, graphIdentifier: URIRef) -> None:
+        return self.__dataset.get_graph(graphIdentifier)    
+            
+    def serialize(self, format: str = 'nquads', destination: str = None) -> str:
+        nquads = self.__dataset.serialize(destination=destination, format=format)
         return nquads
     
 class Metadata(object):

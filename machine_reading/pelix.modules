@@ -1,0 +1,7 @@
+install webapp
+cd readers
+install amr
+cd ../core
+install workflows
+cd ..
+start 15 16 17

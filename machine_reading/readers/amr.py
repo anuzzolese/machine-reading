@@ -1,6 +1,6 @@
 from pelix.ipopo.decorators import ComponentFactory, Property, Provides, Instantiate
 from rdflib.graph import Graph
-from api.api import MachineReader
+from machine_reading.api.api import MachineReader
 import urllib, json
 
 @ComponentFactory("amr-factory")
