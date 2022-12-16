@@ -8,7 +8,7 @@
 The machine reading suite is meant to query multiple machine readers for generating RDF from textual documents.
 RDF are produced by using the [N-Quad](https://www.w3.org/TR/n-quads/) syntax.
 The suite comes along two default machine readers, i.e. (i) [FRED](http://wit.istc.cnr.it/stlab-tools/fred/demo/) and (ii) [Text2AMR2Fred](https://arco.istc.cnr.it/txt-amr-fred/).
-The processing can be executed with the script ```mr.py``` that can be found inside the folder ```machine_reading```.
+The processing can be executed with the script ```mr.py``` that can be found inside the root folder of the project.
 The ```mr.py``` script accepts a CSV file as input and it can be used in the following way
 
 ```

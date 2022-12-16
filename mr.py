@@ -67,17 +67,17 @@ class MR(object):
             for f in os.listdir('./core'):
                 if f.endswith('.py'):
                     f = f[:-3]
-                    mcr_bundles.append(cls.__framework.install_bundle(f, './core'))
+                    mcr_bundles.append(cls.__framework.install_bundle(f, './machine_reading/core'))
             
             if modality == 'all':
                 for f in os.listdir('./readers'):
                     if f.endswith('.py'):
                         f = f[:-3]
-                        mcr_bundles.append(cls.__framework.install_bundle(f, './readers'))
+                        mcr_bundles.append(cls.__framework.install_bundle(f, './machine_reading/readers'))
             elif modality == 'fred':
-                mcr_bundles.append(cls.__framework.install_bundle('fred', './readers'))
+                mcr_bundles.append(cls.__framework.install_bundle('fred', './machine_reading/readers'))
             elif modality == 'amr2fred':
-                mcr_bundles.append(cls.__framework.install_bundle('amr', './readers'))
+                mcr_bundles.append(cls.__framework.install_bundle('amr', './machine_reading/readers'))
                     
             #mcr_bundles.append(cls.__framework.install_bundle('webapp', '.'))
             
