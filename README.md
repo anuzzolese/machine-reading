@@ -57,6 +57,6 @@ The following is a usage example that:
  * saves the N-Quad output in a file named ```out.nq```
 
 ```
-python mr.py -m amr2fred -d ';' -o out.nq MusicBO_ID_sent_test.csv 
+python mr.py -m amr2fred -d ';' -n 'https://w3id.org/stlab/mr_data/' -o out.nq MusicBO_ID_sent_test.csv 
 ```
 
