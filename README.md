@@ -35,7 +35,12 @@ optional arguments:
 
 ```
 
-The input CSV processed by ```mr.py``` is composed of 4 columns, i.e. (i) corpus_id, which is an identifier for a corpus; (ii) document_id, which is an identifier of a document within a corpus; (iii) sentence_id, which is an identifier of document sentence within a corpus; and (iv) content, which is the content of sentence to process.
+The input CSV processed by ```mr.py``` is composed of 4 columns, i.e.: 
+ 1. corpus_id, which is an identifier for a corpus; 
+ 2. document_id, which is an identifier of a document within a corpus; 
+ 3. sentence_id, which is an identifier of document sentence within a corpus;
+ 4. content, which is the content of sentence to process.
+
 The following is an example: 
 
 | corpus_id   | document_id | sentence_id | content |
