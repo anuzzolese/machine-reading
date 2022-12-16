@@ -60,3 +60,5 @@ The following is a usage example that:
 python mr.py -m amr2fred -d ';' -n 'https://w3id.org/stlab/mr_data/' -o out.nq MusicBO_ID_sent_test.csv 
 ```
 
+The resulting graph is then modelled with the following ontology represted with a [Graffoo](https://essepuntato.it/graffoo/) notation.
+![MRO](https://raw.githubusercontent.com/anuzzolese/machine-reading/main/mro.png)
